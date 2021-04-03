@@ -8,6 +8,8 @@
 
 import React from 'react';
 import {
+  Button,
+  Linking,
   StyleSheet,
   Text,
   View,
@@ -16,7 +18,9 @@ import {
 const App = () =>  {
   return (
     <View style={styles.body}>
-      <Text>Norm</Text>
+      <Text style={styles.text}>Norm</Text>
+      <Button title='Youtube' onPress={()=>{Linking.openURL('https://youtube.com/programmingwithmash')}}></Button>
+
     </View>
   );
 };
@@ -27,6 +31,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#aaaaff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  text: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontStyle: 'italic',
+    margin: 10,
   },
 });
 
