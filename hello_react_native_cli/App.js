@@ -23,7 +23,10 @@ const App = () =>  {
 
 const styles = StyleSheet.create({
   body: {
-    backgroundColor: '#ffffff',
+    flex: 1,
+    backgroundColor: '#aaaaff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
