@@ -22,3 +22,19 @@ and in new terminal
 npx react-native run-android
 
 ```
+
+* using the state hook
+* styles and style sheet
+* responsive UI with Flexbox
+* FlatList and SectionList
+* Text Input & Keyboard
+* Button, Touchables & Pressable
+* Alert & Toast Message
+* Modal and Custom Alert
+* Image & Image Background
+* Custom Components & Props
+* React Navigation
+    * Stack Navigator
+    * Tab Navigator
+    * Drawer Navigation
+* Passing Data Between Screens
