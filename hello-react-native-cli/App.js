@@ -14,23 +14,29 @@ import {
 
 const App = () => {
   const [name, SetName] = useState('');
-  let url = 'https://www.google.com/search';
-  url +='?q=myvalue';
-  const [name, SetName] = useState('');
- // const [url, setState(prevState => ({ ...prevState, [name]: value }));] = useState('https://www.google.com/search?q=');
+  let url = 'https://search.yahoo.com/search?p=hat&fr2=sb-top';
+
   return (
     <View style={styles.body}>
       <Text>Please enter name</Text>
       <TextInput
         style={styles.input}
         placeholder='e.g. John'
-        onChangeText={(value) => SetName(url+value)}
+        onChangeText={(value) => SetName(value)}
       />
       <Text style={styles.text}>
         Your name is: {name}
       </Text>
       <Text style={{color: 'blue'}}
-      onPress={() => Linking.openURL(url)}>search for {name}</Text>
+        //  onPress={() => Linking.openURL(url)}
+         onPress={() => {
+         // alert('going to '+url);
+         console.log('going to '+url)
+          queryUrl = url + name;
+          Linking.openURL(url);
+        }}>
+        search for {name}
+      </Text>
     </View>
   );
 };
