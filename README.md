@@ -2,6 +2,7 @@ This is a repo for my simple [React Native](https://reactnative.dev/) projects w
 
 Expo CLI might be easier for beginners as it manages much more of the process of getting your app to run on Android and IPhone devices but also deployed to the respective stores. Expo does have some limitations for advanced applications but beginners with simple apps should probably try Expo first. You can be try out an example Expo app in minutes by installing the (Expo Go app)[https://expo.io/client] on your phone. Then load and run a sample app from [snack.expo.io](https://snack.expo.io/). They can be loaded by scanning a QR code.  
 
+
 Projects that don't use Expo are sometimes called vanilla projects as they lack the extra sauce of Expo. 
 
 I have both Expo CLI and React Native CLI projects here. 
@@ -49,4 +50,16 @@ or
 For Android simulations, you can view console.log:
 ```
    adb logcat *:S ReactNative:V ReactNativeJS:V
+```
+
+Miscellaneous things I've run into:
+* If files in a subfolder are not getting pushed to the repo [Fixing GIT submodule](https://gist.github.com/claraj/e5563befe6c2fb108ad0efb6de47f265#file-git_submodule_fix-md)
+* At one point I renamed a project folder and broke the contents of the android and ios folders. In order to fix it:
+
+
+delete android and ios folders, then:
+
+```
+    yarn add react-native-eject
+    npx react-native eject
 ```
