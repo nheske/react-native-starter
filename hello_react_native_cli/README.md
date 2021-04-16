@@ -17,9 +17,10 @@ npx react-native init hello_react_native_cli
 Running React Native application
 ```
 cd hello_react_native_cli
-npx react-native start
-and in new terminal
-npx react-native run-android
+yarn start (npx react-native start)
+
+and in new terminal (if android connected in debug or android sim up)
+yarn android (npx react-native run-android)
 
 ```
 
