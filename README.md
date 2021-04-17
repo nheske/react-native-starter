@@ -1,6 +1,6 @@
 This is a repo for my simple [React Native](https://reactnative.dev/) projects while I was learning. You can start a React Native project with either Expo CLI or React Native CLI. 
 
-Expo CLI might be easier for beginners as it manages much more of the process of getting your app to run on Android and IPhone devices but also deployed to the respective stores. Expo does have some limitations for advanced applications but beginners with simple apps should probably try Expo first. You can be try out an example Expo app in minutes by installing the (Expo Go app)[https://expo.io/client] on your phone. Then load and run a sample app from [snack.expo.io](https://snack.expo.io/). They can be loaded by scanning a QR code.  
+Expo CLI might be easier for beginners as it manages much more of the process of getting your app to run on Android and IPhone devices but also deployed to the respective stores. Expo does have some limitations for advanced applications but beginners with simple apps should probably try Expo first. You can try out an example Expo app in minutes by installing the (Expo Go app)[https://expo.io/client] on your phone. Then load and run a sample app from [snack.expo.io](https://snack.expo.io/). They can be loaded by scanning a QR code.  
 
 
 Projects that don't use Expo are sometimes called vanilla projects as they lack the extra sauce of Expo. 
