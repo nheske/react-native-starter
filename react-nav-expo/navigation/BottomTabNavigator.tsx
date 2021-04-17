@@ -12,7 +12,8 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import FlatlistApiScreen from '../screens/FlatlistApiScreen';
+import { BottomTabParamList, TabOneParamList, TabTwoParamList, FlatListApiParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -37,9 +38,16 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="TabThree"
         component={TabTwoNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      /> */}
+      <BottomTab.Screen
+        name="FlatListApi"
+        component={FlatlistApiNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
@@ -81,5 +89,19 @@ function TabTwoNavigator() {
         options={{ headerTitle: 'Tab Two Title' }}
       />
     </TabTwoStack.Navigator>
+  );
+}
+
+const FlatListApiStack = createStackNavigator<FlatListApiParamList>();
+
+function FlatlistApiNavigator() {
+  return (
+    <FlatListApiStack.Navigator>
+      <FlatListApiStack.Screen
+        name="FlatlistApiScreen"
+        component={FlatlistApiScreen}
+        options={{ headerTitle: 'FlatList API Title' }}
+      />
+    </FlatListApiStack.Navigator>
   );
 }
