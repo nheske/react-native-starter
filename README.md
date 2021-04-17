@@ -4,6 +4,11 @@ Expo CLI might be easier for beginners as it manages much more of the process of
 
 
 Projects that don't use Expo are sometimes called vanilla projects as they lack the extra sauce of Expo. 
+If you download my repo and want to enable, cd to the project folder, for example
+```
+cd hello-react-expo
+npm install
+```
 
 I have both Expo CLI and React Native CLI projects here. 
 
