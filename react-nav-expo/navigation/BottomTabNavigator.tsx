@@ -12,8 +12,9 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
+import ScrollViewScreen from '../screens/ScrollViewScreen';
 import FlatlistApiScreen from '../screens/FlatlistApiScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList, FlatListApiParamList } from '../types';
+import { BottomTabParamList, TabOneParamList, TabTwoParamList, ScrollViewParamList, FlatListApiParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -45,6 +46,13 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
       /> */}
+      <BottomTab.Screen
+        name="Scroll"
+        component={ScrollViewNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
       <BottomTab.Screen
         name="FlatListApi"
         component={FlatlistApiNavigator}
@@ -89,6 +97,20 @@ function TabTwoNavigator() {
         options={{ headerTitle: 'Tab Two Title' }}
       />
     </TabTwoStack.Navigator>
+  );
+}
+
+const ScrollViewStack = createStackNavigator<ScrollViewParamList>();
+
+function ScrollViewNavigator() {
+  return (
+    <ScrollViewStack.Navigator>
+      <ScrollViewStack.Screen
+        name="ScrollViewScreen"
+        component={ScrollViewScreen}
+        options={{ headerTitle: 'ScrollView Title' }}
+      />
+    </ScrollViewStack.Navigator>
   );
 }
 

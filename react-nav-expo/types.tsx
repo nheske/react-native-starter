@@ -22,5 +22,10 @@ export type TabTwoParamList = {
 };
 
 export type FlatListApiParamList = {
-  FlatListApi: undefined;
+  FlatListApiScreen: undefined;
 };
+
+export type ScrollViewParamList = {
+  ScrollViewScreen: undefined;
+};
+
