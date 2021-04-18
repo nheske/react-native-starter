@@ -14,8 +14,9 @@ import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import FlexboxScreen from '../screens/FlexboxScreen';
 import ScrollViewScreen from '../screens/ScrollViewScreen';
+import SectionListScreen from '../screens/SectionListScreen';
 import FlatlistApiScreen from '../screens/FlatlistApiScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList, FlexboxParamList, ScrollViewParamList, FlatListApiParamList } from '../types';
+import { BottomTabParamList, TabOneParamList, TabTwoParamList, FlexboxParamList, ScrollViewParamList, SectionListApiParamList, FlatListApiParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -57,6 +58,14 @@ export default function BottomTabNavigator() {
       <BottomTab.Screen
         name="FlatListApi"
         component={FlatlistApiNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
+      
+      <BottomTab.Screen
+        name="SectionList"
+        component={SectionListNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
@@ -140,5 +149,19 @@ function FlatlistApiNavigator() {
         options={{ headerTitle: 'FlatList API Title' }}
       />
     </FlatListApiStack.Navigator>
+  );
+}
+
+const SectionListStack = createStackNavigator<SectionListParamList>();
+
+function SectionListNavigator() {
+  return (
+    <SectionListStack.Navigator>
+      <SectionListStack.Screen
+        name="SectionListScreen"
+        component={SectionListScreen}
+        options={{ headerTitle: 'SectionList Title' }}
+      />
+    </SectionListStack.Navigator>
   );
 }

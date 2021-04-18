@@ -25,6 +25,9 @@ export type FlexboxParamList = {
   FlexboxScreen: undefined;
 };
 
+export type SectionListApiParamList = {
+  SectionListScreen: undefined;
+};
 export type FlatListApiParamList = {
   FlatListApiScreen: undefined;
 };
