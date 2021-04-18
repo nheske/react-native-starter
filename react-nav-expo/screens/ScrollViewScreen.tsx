@@ -40,7 +40,7 @@ export default function ScrollViewScreen() {
         />
       }
     >
-      <Text>ScrollView</Text>
+      <Text>ScrollView and RefreshControl</Text>
       {
         Items.map((object) => {
           return (

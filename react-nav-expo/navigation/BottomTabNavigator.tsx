@@ -12,9 +12,10 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
+import FlexboxScreen from '../screens/FlexboxScreen';
 import ScrollViewScreen from '../screens/ScrollViewScreen';
 import FlatlistApiScreen from '../screens/FlatlistApiScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList, ScrollViewParamList, FlatListApiParamList } from '../types';
+import { BottomTabParamList, TabOneParamList, TabTwoParamList, FlexboxParamList, ScrollViewParamList, FlatListApiParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -39,13 +40,13 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
       />
-      {/* <BottomTab.Screen
-        name="TabThree"
-        component={TabTwoNavigator}
+      <BottomTab.Screen
+        name="Flexbox"
+        component={FlexboxNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
-      /> */}
+      />
       <BottomTab.Screen
         name="Scroll"
         component={ScrollViewNavigator}
@@ -97,6 +98,20 @@ function TabTwoNavigator() {
         options={{ headerTitle: 'Tab Two Title' }}
       />
     </TabTwoStack.Navigator>
+  );
+}
+
+const FlexboxStack = createStackNavigator<FlexboxParamList>();
+
+function FlexboxNavigator() {
+  return (
+    <FlexboxStack.Navigator>
+      <FlexboxStack.Screen
+        name="FlexboxScreen"
+        component={FlexboxScreen}
+        options={{ headerTitle: 'Flexbox Title' }}
+      />
+    </FlexboxStack.Navigator>
   );
 }
 

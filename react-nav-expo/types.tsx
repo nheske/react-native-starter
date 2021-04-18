@@ -21,6 +21,10 @@ export type TabTwoParamList = {
   TabTwoScreen: undefined;
 };
 
+export type FlexboxParamList = {
+  FlexboxScreen: undefined;
+};
+
 export type FlatListApiParamList = {
   FlatListApiScreen: undefined;
 };
