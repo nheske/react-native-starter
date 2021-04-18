@@ -14,7 +14,7 @@ import {
 
 const App = () => {
   const [name, SetName] = useState('');
-  let url = 'https://search.yahoo.com/search?p=hat&fr2=sb-top';
+  let url = 'https://search.yahoo.com/search?fr2=sb-top&p=';
 
   return (
     <View style={styles.body}>
@@ -31,9 +31,9 @@ const App = () => {
         //  onPress={() => Linking.openURL(url)}
          onPress={() => {
          // alert('going to '+url);
-         console.log('going to '+url)
           queryUrl = url + name;
-          Linking.openURL(url);
+          console.log('going to '+queryUrl)
+          Linking.openURL(queryUrl);
         }}>
         search for {name}
       </Text>
