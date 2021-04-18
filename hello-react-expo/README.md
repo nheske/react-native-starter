@@ -1,19 +1,12 @@
-Based on  [Getting Started with React Navigation v5 and React Native Paper - Stack Navigator](https://www.youtube.com/watch?v=ZQewGMPJNV0)
+Based on the excellent video [React Native Tutorial #2 (2021) - Creating first app with Expo](https://www.youtube.com/watch?v=p1Csi_0rh5I&list=PLqGdu3H2yIjax3haGsMs2MST6zD4Pux9Y&index=10)
 
 I created project with 
 ```
-    expo init native-paper-nav
-```
-install dependencies:
-```
-    cd native-paper-nav
-    npm install @react-navigation/native @react-navigation/stack @react-native-community/masked-view @react-navigation/drawer @react-navigation/material-bottom-tabs react-native-paper
-
-    expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
+    expo init hello-react-expo
 ```
 
 To run:
 ```
+    cd hello-react-expo
     yarn start 
 ```
-
